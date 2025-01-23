@@ -2,6 +2,7 @@ import woman1 from "./images/8.png"
 import woman2 from "./images/9.png"
 import woman3 from "./images/6.png"
 import woman4 from "./images/7.png"
+import { Greeting, GreetingPriceFirst, GreetingTovar } from "./Greeting"
 
 
 function WomanCards (){
@@ -14,27 +15,27 @@ function WomanCards (){
             <div className="cards">
                 <div className="card">
                     <img src={woman1} alt="woman1" />
-                    <span className="gray-txt">IGURE</span>
-                    <p>GREEN MUSCLE FIT POLO SHIRT</p>
-                    <span className="span-in-span">$229.00<span>$129.00</span></span>
+                    <GreetingTovar tovarName = "IGURE"/>
+                    <Greeting textName = "GREEN MUSCLE FIT POLO SHIRT"/>
+                    <GreetingPriceFirst priceFirst="$229.00" priceSecond = "$129.00"/>
                 </div>
                 <div className="card">
                     <img src={woman2} alt="woman1" />
-                    <span className="gray-txt">IGURE</span>
-                    <p>GREEN MUSCLE FIT POLO SHIRT</p>
-                    <span className="span-in-span">$229.00<span>$129.00</span></span>
+                    <GreetingTovar tovarName = "IGURE"/>
+                    <Greeting textName = "GREEN MUSCLE FIT POLO SHIRT"/>
+                    <GreetingPriceFirst priceFirst="$229.00" priceSecond = "$129.00"/>
                 </div>
                 <div className="card">
                     <img src={woman3} alt="woman1" />
-                    <span className="gray-txt">IGURE</span>
-                    <p>GREEN MUSCLE FIT POLO SHIRT</p>
-                    <span className="span-in-span">$229.00<span>$129.00</span></span>
+                    <GreetingTovar tovarName = "IGURE"/>
+                    <Greeting textName = "GREEN MUSCLE FIT POLO SHIRT"/>
+                    <GreetingPriceFirst priceFirst="$229.00" priceSecond = "$129.00"/>
                 </div>
                 <div className="card">
                     <img src={woman4} alt="woman1" />
-                    <span className="gray-txt">IGURE</span>
-                    <p>GREEN MUSCLE FIT POLO SHIRT</p>
-                    <span className="span-in-span">$229.00<span>$129.00</span></span>
+                    <GreetingTovar tovarName = "IGURE"/>
+                    <Greeting textName = "GREEN MUSCLE FIT POLO SHIRT"/>
+                    <GreetingPriceFirst priceFirst="$229.00" priceSecond = "$129.00"/>
                 </div>
             </div>
         </section>
