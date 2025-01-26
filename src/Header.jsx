@@ -2,7 +2,7 @@ import search from "./images/search.png"
 import heart from "./images/favorite.png"
 import cart from "./images/shopping_cart.png"
 
-function MyFuncHeader(){
+export function Header(){
     return (
         <header className="header">
             <section className="header-section">
@@ -16,9 +16,9 @@ function MyFuncHeader(){
                     <li>BLOG</li>
                 </ul>
                 <div className="menu">
-                    <img src={search} alt="" />
-                    <img src={heart} alt="" />
-                    <img src={cart} alt="" />
+                    <img src={search} alt="search" />
+                    <img src={heart} alt="heart" />
+                    <img src={cart} alt="cart" />
                 </div>
             </section>
             <section className="hero-section">
@@ -35,5 +35,3 @@ function MyFuncHeader(){
         </header>
     )    
 }
-
-export default MyFuncHeader;

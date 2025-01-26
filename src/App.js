@@ -1,12 +1,14 @@
 import './App.css';
-import MyFuncHeader from "./Header"; //незнаю на что он жалуется но все работает
-import CardSection from "./CardsSection";
+import { Footer } from './Footer';
+import { Header } from "./Header";
+import { Main } from './Main';
 
 function App() {
   return (
     <div className="App">
-      <MyFuncHeader />
-      <CardSection />
+      <Header />
+      <Main />
+      <Footer />
     </div>
   );
 }
