@@ -1,30 +1,34 @@
 import search from "./images/search.png"
 import heart from "./images/favorite.png"
 import cart from "./images/shopping_cart.png"
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import {Modal} from "./Modal";
+import { FavoriteModal } from "./FavoriteModal";
 const body = document.querySelector("body")
 
 export function Header(){
 
     const [isModalOpen, setIsModalOpen] = useState(false);
+
     const openModal = () => {
-        setIsModalOpen(true);
-        body.style.overflowY = "hidden"
-    };
+        setIsModalOpen(true)
+    }
+
     const closeModal = () => {
         setIsModalOpen(false);
-        body.style.overflowY = "scroll"
-    };
+      };
+    
 
     const [isFavoriteOpen, setIsFavoriteOpen] = useState(false);
     const openFavorite = () => {
         setIsFavoriteOpen(true);
-        body.style.overflowY = "hidden"
+        // body.style.overflowY = "hidden"
     };
     const closeFavorite = () => {
         setIsFavoriteOpen(false);
-        body.style.overflowY = "scroll"
+        // body.style.overflowY = "scroll"
     }
+
 
 
     return (
@@ -48,21 +52,14 @@ export function Header(){
                     <button onClick={openModal} className="login-main">Login</button>
                 </div>
                 {isModalOpen ? (
-                <div className="container-login">
-                    <div className="login-backround">
-                        <h1>Login in your Account</h1>
-                        <button id="x" onClick={closeModal}>x</button>
-                        <hr />
-                        <input type="text" placeholder="Enter your Name"/>
-                        <input type="text" placeholder="Enter your password"/>
-                        <div className={`login-register`}>
-                            <button>Login</button>
-                            <button id="register">Register</button>
-                        </div>
-                    </div>
-                </div>
-                ): null}
+                    <Modal onClose={closeModal} />
+                ) : null}
+
                 {isFavoriteOpen ? (
+                    <FavoriteModal onCloseFavorite = {closeFavorite}/>
+                ) : null}
+
+                {/* {isFavoriteOpen ? (
                 <div className="favorite-modal">
                     <div className ="favorite-backround">
                         <div className="my-favorites"></div>
@@ -72,7 +69,7 @@ export function Header(){
                         </div>
                     </div>
                 </div>
-                ) : null}
+                ) : null} */}
             </section>
             <section className="hero-section">
                 <div className="hero-content">
