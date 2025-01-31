@@ -1,5 +1,5 @@
-import location from "./images/location.png"
-import media from "./images/social-media.png"
+import location from "../images/location.png"
+import media from "../images/social-media.png"
 
 export function Footer (){
     return (

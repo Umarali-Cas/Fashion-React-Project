@@ -88,13 +88,6 @@ button{
   font-size: 10px;
 }
 
-
-.nav li{
-  font-weight: 400;
-  font-size: 18px;
-  color: #22262a;
-}
-
 .nav{
   display: flex;
   column-gap: 20px;
@@ -652,4 +645,16 @@ footer{
 .my-favorites{
   height: 90%;
   width: 100%;
+}
+
+.link{
+  font-weight: 400;
+  font-size: 18px;
+  color: #22262a;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.active-link{
+  font-weight: 900;
 }

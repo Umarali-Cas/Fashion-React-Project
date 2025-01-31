@@ -1,19 +1,19 @@
-import Men1 from "./images/Men1.png"
-import Men2 from "./images/Men2.png"
-import Men3 from "./images/Men3.png"
-import Men4 from "./images/Men4.png"
-import woman1 from "./images/8.png"
-import woman2 from "./images/9.png"
-import woman3 from "./images/6.png"
-import woman4 from "./images/7.png"
-import firstCard from "./images/first-card.png"
-import secondCard from "./images/3.png"
-import thirdCard from "./images/4.png"
-import fourCard from "./images/5.png"
-import { Greeting } from "./Greeting"
-import photo from "./images/picture.png"
-import photo2 from "./images/photo2.png"
-import photo3 from "./images/photo3.png"
+import Men1 from "../images/Men1.png"
+import Men2 from "../images/Men2.png"
+import Men3 from "../images/Men3.png"
+import Men4 from "../images/Men4.png"
+import woman1 from "../images/8.png"
+import woman2 from "../images/9.png"
+import woman3 from "../images/6.png"
+import woman4 from "../images/7.png"
+import firstCard from "../images/first-card.png"
+import secondCard from "../images/3.png"
+import thirdCard from "../images/4.png"
+import fourCard from "../images/5.png"
+import { Greeting } from "../Greeting"
+import photo from "../images/picture.png"
+import photo2 from "../images/photo2.png"
+import photo3 from "../images/photo3.png"
 
 const imagesMen = [Men1,Men2,Men3,Men4]
 const imagesWomen = [woman1,woman2,woman3,woman4]
@@ -21,6 +21,17 @@ const imagesWomen = [woman1,woman2,woman3,woman4]
 export function Main(){
     return(
         <main>
+            <section className="hero-section">
+                <div className="hero-content">
+                    <span>NEW TREND</span>
+                    <h1>COLLUSION</h1>
+                    <p>An exclusive selection of this season's trends.</p>
+                    <div className="hero-buttons">
+                        <button>DISCOVER</button>
+                        <button>SHOP NOW</button>
+                    </div>
+                </div>
+            </section>
             <section className="cards-section">
                 <div className="up">
                 <img src={firstCard} alt="first-card"/>

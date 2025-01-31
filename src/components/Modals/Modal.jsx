@@ -5,12 +5,12 @@ export function Modal({ onClose }){
   
     useEffect(() => {
       const interval = setInterval(() => {
-        setSeconds(prev => console.log(prev + 1));
+        setSeconds((prev) => prev + 1);
         
       }, 1000);
       return () => {
         clearInterval(interval);
-        prompt('Выполнено размонтирование компоненты');
+        // prompt('Выполнено размонтирование компоненты');
       };
     }, []);
 
@@ -26,6 +26,7 @@ export function Modal({ onClose }){
                 <button>Login</button>
                 <button id="register">Register</button>
             </div>
+            <p>timer {seconds}</p>
         </div>
     </div>
     )
