@@ -21,15 +21,13 @@ export function Header(){
       };
     
 
-    const [isFavoriteOpen, setIsFavoriteOpen] = useState(false);
-    const openFavorite = () => {
-        setIsFavoriteOpen(true);
-        // body.style.overflowY = "hidden"
-    };
-    const closeFavorite = () => {
-        setIsFavoriteOpen(false);
-        // body.style.overflowY = "scroll"
-    }
+    // const [isFavoriteOpen, setIsFavoriteOpen] = useState(false);
+    // const openFavorite = () => {
+    //     setIsFavoriteOpen(true);
+    // };
+    // const closeFavorite = () => {
+    //     setIsFavoriteOpen(false);
+    // }
 
     const routes = [
         {
@@ -72,7 +70,7 @@ export function Header(){
                     </nav>
                     <div className="menu">
                         <button id = "search-nav"></button>
-                        <button onClick={openFavorite} id = "heart-nav"></button>
+                        <button id = "heart-nav"></button>
                         <button id = "cart-nav"></button>
                     </div>
                     <button onClick={openModal} className="login-main">Login</button>
@@ -81,9 +79,9 @@ export function Header(){
                     <Modal onClose={closeModal} />
                 ) : null}
 
-                {isFavoriteOpen ? (
+                {/* {isFavoriteOpen ? (
                     <FavoriteModal onCloseFavorite = {closeFavorite}/>
-                ) : null}
+                ) : null} */}
             </section>
         </header>
     )    

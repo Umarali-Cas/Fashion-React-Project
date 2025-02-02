@@ -40,7 +40,10 @@ export function Main(){
                     <img src={thirdCard} alt="third-card"/>
                 </div>
                 </div>
-                <div className="four-card"><img src={fourCard} alt="four"/><button>CATAGORY NAME</button></div>
+                <div className="four-card">
+                    <img src={fourCard} alt="four" />
+                    <button>CATAGORY NAME</button>
+                </div>
             </section>
             <section className="women-cards">
                 <div className="women-cards-txt">

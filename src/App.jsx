@@ -6,8 +6,6 @@ import { Main } from './components/Main';
 
 function App() {
 
-  // const hideMain = location.pathname === '/shop' || location.pathname === '/lookbook';
-
   return (
     <div className="App">
       <BrowserRouter>

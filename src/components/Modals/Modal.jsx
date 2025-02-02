@@ -18,7 +18,7 @@ export function Modal({ onClose }){
     <div className="container-login">
         <div className="login-backround">
             <h1>Login in your Account</h1>
-            <button id="x" onClick={onClose}>x</button>
+            <button id="x" onClick={onClose}>+</button>
             <hr />
             <input type="text" placeholder="Enter your Name"/>
             <input type="text" placeholder="Enter your password"/>
