@@ -13,7 +13,7 @@ function App() {
       <BrowserRouter>
       <Header />
         <Routes>
-          <Route path='/' element = {<h1>HOME</h1>}/>
+          <Route path='/' element = {<Main />}/>
           <Route path='/shop' element = {<h1>SHOP</h1>}/>
           <Route path='/lookbook' element = {<h1>LOOKBOOK</h1>}/>
           <Route path='/features' element = {<h1>FEATURES</h1>}/>
@@ -21,7 +21,6 @@ function App() {
           <Route path='/blog' element = {<h1>BLOG</h1>}/>
           <Route path='*' element = {<h1>Такой страницы не существует</h1>}/>
         </Routes>
-        <Main />
         <Footer />
       </BrowserRouter>
     </div>
