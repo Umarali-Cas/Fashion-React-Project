@@ -3,6 +3,7 @@ import './App.css';
 import { Footer } from './components/Footer';
 import { Header } from "./components/Header";
 import { Main } from './components/Main';
+import { Shop } from './components/Routes/Shop';
 
 function App() {
 
@@ -12,7 +13,7 @@ function App() {
       <Header />
         <Routes>
           <Route path='/' element = {<Main />}/>
-          <Route path='/shop' element = {<h1>SHOP</h1>}/>
+          <Route path='/shop/:id' element = {<Shop />}/>
           <Route path='/lookbook' element = {<h1>LOOKBOOK</h1>}/>
           <Route path='/features' element = {<h1>FEATURES</h1>}/>
           <Route path='/pages' element = {<h1>PAGES</h1>}/>

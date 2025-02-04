@@ -1,11 +1,3 @@
-import Men1 from "../images/Men1.png"
-import Men2 from "../images/Men2.png"
-import Men3 from "../images/Men3.png"
-import Men4 from "../images/Men4.png"
-import woman1 from "../images/8.png"
-import woman2 from "../images/9.png"
-import woman3 from "../images/6.png"
-import woman4 from "../images/7.png"
 import firstCard from "../images/first-card.png"
 import secondCard from "../images/3.png"
 import thirdCard from "../images/4.png"
@@ -15,10 +7,13 @@ import photo from "../images/picture.png"
 import photo2 from "../images/photo2.png"
 import photo3 from "../images/photo3.png"
 
-const imagesMen = [Men1,Men2,Men3,Men4]
-const imagesWomen = [woman1,woman2,woman3,woman4]
+import { ProductCardMen, ProductCardWomen } from "../mock/main.mock"
+import { useEffect, useState } from "react"
+import { Link, useNavigate, useParams } from "react-router-dom"
 
 export function Main(){
+
+    
     return(
         <main>
             <section className="hero-section">
@@ -51,10 +46,24 @@ export function Main(){
                 <p className="card-txt">Shop our new arrivals from established brands</p>
                 </div>
                 <div className="cards">
-                {imagesWomen.map(img=>{
+                {/* {imagesWomen.map(img=>{
                         return (
                             <Greeting picture={img} tovarName = "IGURE" textName = "GREEN MUSCLE FIT POLO SHIRT"
                             priceFirst="$229.00" priceSecond = "$129.00"/>
+                    )
+                })} */}
+                {ProductCardWomen.map(product => {
+                    return (
+                        <Link className="link-card" key={product.id} to={`/shop/${product.id}`}>
+                            <Greeting 
+                                key={product.id}
+                                picture={product.img} 
+                                tovarName={product.tovarName}
+                                textName={product.textName}
+                                priceFirst={product.priceFirst}
+                                priceSecond={product.priceSecond}
+                            />
+                        </Link>
                     )
                 })}
                 </div>
@@ -65,10 +74,24 @@ export function Main(){
                 <p className="card-txt">Shop our new arrivals from established brands</p>
                 </div>
                 <div className="cards">
-                {imagesMen.map(img=>{
+                {/* {imagesMen.map(img=>{
                         return (
                             <Greeting picture={img} tovarName = "IGURE" textName = "GREEN MUSCLE FIT POLO SHIRT"
-                            priceFirst="$229.00" priceSecond = "$129.00"/>
+                            priceFirst="$229.00" priceSecond = "$129.00" key={1}/>
+                    )
+                })} */}
+                {ProductCardMen.map(product => {
+                    return (
+                        <Link className="link-card" key={product.id} to={`/shop/${product.id}`}>
+                            <Greeting 
+                                key={product.id}
+                                picture={product.img} 
+                                tovarName={product.tovarName}
+                                textName={product.textName}
+                                priceFirst={product.priceFirst}
+                                priceSecond={product.priceSecond}
+                            />
+                        </Link>
                     )
                 })}
                 </div>

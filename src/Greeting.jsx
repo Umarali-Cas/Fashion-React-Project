@@ -1,6 +1,7 @@
 import { useState } from "react"
+import { useNavigate } from "react-router-dom";
 
-export const Greeting = ({ picture, textName, tovarName, priceFirst, priceSecond }) => {
+export const Greeting = ({ picture, textName, tovarName, priceFirst, priceSecond, key }) => {
 
     const [count, setCount] = useState(0);
 
@@ -9,6 +10,8 @@ export const Greeting = ({ picture, textName, tovarName, priceFirst, priceSecond
 
         setCount((prev) => prev - 1)
     }
+
+    const redirect = useNavigate()
 
     return (
         <div className="card">
