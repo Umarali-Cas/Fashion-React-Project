@@ -246,7 +246,6 @@ main{
   display: flex;
   flex-direction: column;
   align-items: start;
-  cursor: pointer;
 }
 
 .card p{
@@ -254,12 +253,28 @@ main{
   font-size: 15px;
   color: #22262a;
   margin-bottom: 3px;
+  margin-top: 27px;
 }
 
 .card img{
   width: 268px;
   height: 371px;
-  margin-bottom: 38px;
+}
+
+.card img:hover{
+  transition: 0.3s;
+  filter: brightness(80%);
+}
+
+.card .link-card{
+  border: 1px solid gray;
+  padding: 3px;
+  display: flex;
+}
+
+.card .link-card:hover{
+  transition: 0.3s;
+  transform: scale(1.05);
 }
 
 .span-in-span span{

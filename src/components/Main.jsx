@@ -54,16 +54,16 @@ export function Main(){
                 })} */}
                 {ProductCardWomen.map(product => {
                     return (
-                        <Link className="link-card" key={product.id} to={`/shop/${product.id}`}>
-                            <Greeting 
-                                key={product.id}
+                        // <Link className="link-card" key={product.id} to={`/shop/${product.id}`}>
+                        <Greeting 
+                                productId={product.id}
                                 picture={product.img} 
                                 tovarName={product.tovarName}
                                 textName={product.textName}
                                 priceFirst={product.priceFirst}
                                 priceSecond={product.priceSecond}
                             />
-                        </Link>
+                        // </Link>
                     )
                 })}
                 </div>
@@ -82,16 +82,16 @@ export function Main(){
                 })} */}
                 {ProductCardMen.map(product => {
                     return (
-                        <Link className="link-card" key={product.id} to={`/shop/${product.id}`}>
+                        // <Link className="link-card" key={product.id} to={`/shop/${product.id}`}>
                             <Greeting 
-                                key={product.id}
+                                productId={product.id}
                                 picture={product.img} 
                                 tovarName={product.tovarName}
                                 textName={product.textName}
                                 priceFirst={product.priceFirst}
                                 priceSecond={product.priceSecond}
                             />
-                        </Link>
+                        // </Link>
                     )
                 })}
                 </div>

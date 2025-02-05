@@ -1,7 +1,7 @@
 import { useState } from "react"
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-export const Greeting = ({ picture, textName, tovarName, priceFirst, priceSecond, key }) => {
+export const Greeting = ({ picture, textName, tovarName, priceFirst, priceSecond, productId }) => {
 
     const [count, setCount] = useState(0);
 
@@ -15,7 +15,9 @@ export const Greeting = ({ picture, textName, tovarName, priceFirst, priceSecond
 
     return (
         <div className="card">
-            <img src={picture} alt={picture} />
+            {<Link className="link-card" key={productId} to={`/shop/${productId}`}>
+                {<img src={picture} alt={picture} />}
+            </Link>}
             <p>{textName}</p>
             <span>{tovarName}</span>
             <span className="span-in-span">{priceFirst} <span>{priceSecond}</span></span>
