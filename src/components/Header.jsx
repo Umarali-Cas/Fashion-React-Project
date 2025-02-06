@@ -73,7 +73,7 @@ export function Header(){
                         <button id = "heart-nav"></button>
                         <button id = "cart-nav"></button>
                     </div>
-                    <button onClick={openModal} className="login-main">Login</button>
+                    <button onClick={openModal} className="login-main" id="login-btn">Login</button>
                 </div>
                 {isModalOpen ? (
                     <Modal onClose={closeModal} />

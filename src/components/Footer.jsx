@@ -14,7 +14,7 @@ export function Footer (){
                         <span>Comilla, Bangladesh 3500</span>
                     </div>
                     <div className="social-links">
-                        <span>kawsarahmed0210@gmail.com</span>
+                        <a href="">kawsarahmed0210@gmail.com</a>
                         <hr />
                         <span>01647470457</span>
                     </div>
@@ -29,24 +29,24 @@ export function Footer (){
                     <div className="links">
                         <ul>
                             <li id="first-txt">SHOP</li>
-                            <li>Shop</li>
-                            <li>Collection</li>
-                            <li>Outlet</li>
-                            <li>Lookbook</li>
+                            <li><a href="">Shop</a></li>
+                            <li><a href="">Collection</a></li>
+                            <li><a href="">Outlet</a></li>
+                            <li><a href="">Lookbook</a></li>
                         </ul>
                         <ul>
                             <li id="first-txt">HELP</li>
-                            <li>FAQ</li>
-                            <li>Privecy Policy</li>
-                            <li>Tearms and conditions</li>
-                            <li>Return and Exchanges</li>
+                            <li><a href="">FAQ</a></li>
+                            <li><a href="">Privecy Policy</a></li>
+                            <li><a href="">Tearms and conditions</a></li>
+                            <li><a href="">Return and Exchanges</a></li>
                         </ul>
                         <ul>
                             <li id="first-txt">ABOUT</li>
-                            <li>Journal</li>
-                            <li>Our Story</li>
-                            <li>Contact</li>
-                            <li>Store Location</li>
+                            <li><a href="">Journal</a></li>
+                            <li><a href="">Our Story</a></li>
+                            <li><a href="">Contact</a></li>
+                            <li><a href="">Store Location</a></li>
                         </ul>
                     </div>
                 </div>

@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom";
 
-export const Greeting = ({ picture, textName, tovarName, priceFirst, priceSecond, productId }) => {
+export const Greeting = ({ picture, textName, tovarName, priceFirst, priceSecond, productId}) => {
 
     const [count, setCount] = useState(0);
 
@@ -11,13 +11,12 @@ export const Greeting = ({ picture, textName, tovarName, priceFirst, priceSecond
         setCount((prev) => prev - 1)
     }
 
-    const redirect = useNavigate()
-
     return (
         <div className="card">
             {<Link className="link-card" key={productId} to={`/shop/${productId}`}>
                 {<img src={picture} alt={picture} />}
             </Link>}
+            {/* <img src={picture} alt={picture} onClick={clicked}/> */}
             <p>{textName}</p>
             <span>{tovarName}</span>
             <span className="span-in-span">{priceFirst} <span>{priceSecond}</span></span>

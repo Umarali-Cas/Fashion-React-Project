@@ -1,6 +1,4 @@
-import { useNavigate, useParams } from "react-router-dom"
-import { Greeting } from "../../Greeting"
-import { useState } from "react"
+import { useLocation, useNavigate, useParams } from "react-router-dom"
 import { ProductCardMen, ProductCardWomen } from "../../mock/main.mock";
 
 

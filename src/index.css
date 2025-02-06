@@ -151,6 +151,12 @@ button{
   border: none;
 }
 
+.hero-buttons button:hover{
+  transition: 0.05s;
+  background: white;
+  color: #22262a;
+}
+
 main{
   display: flex;
   flex-direction: column;
@@ -174,6 +180,13 @@ main{
   column-gap: 26px;
 }
 
+.cards-section .up img:hover{
+  transition: 0.2s;
+  filter: brightness(80%);
+  transform: scale(1.02);
+
+}
+
 .cards-section .four-card{
   width: 552px;
   height: 574px;
@@ -182,7 +195,12 @@ main{
 
 .cards-section .four-card img:hover{
   transition: 0.2s;
-  filter: brightness(50%);
+  filter: brightness(80%);
+}
+
+.cards-section .four-card:hover{
+  transition: 0.2s;
+  transform: scale(1.02);
 }
 
 .cards-section .four-card button{
@@ -448,6 +466,20 @@ footer{
   row-gap: 4px;
 }
 
+.social-links a{
+  text-decoration: none;
+  color: #22262a;
+}
+.social-links a:hover{
+  color: #5050ff;
+}
+
+.social-links span:hover{
+  color: #5050ff;
+  cursor: pointer;
+
+}
+
 .footer-top-right{
   display: flex;
   flex-direction: column;
@@ -499,10 +531,15 @@ footer{
   row-gap: 20px;
 }
 
-.links ul li{
+.links ul li a{
   font-weight: 400;
   font-size: 15px;
   color: #22262a;
+  text-decoration: none;
+}
+
+.links ul li a:hover{
+  color: #5050ff;
 }
 
 #first-txt{
@@ -531,6 +568,20 @@ footer{
   justify-content: center;
   align-items: center;
   z-index: 5;
+}
+
+#login-btn{
+  font-size: 18px;
+  padding: 10px 50px;
+  border: 1px solid #22262a;
+
+}
+
+#login-btn:hover{
+  transition: 0.1s;
+  background: white;
+  color: #22262a;
+  border: 1px solid #22262a;
 }
 
 .login-backround{
@@ -724,6 +775,21 @@ footer{
   margin: 10px 0;
 }
 
-.plus{
-  z-index: 10;
+.minus:hover{
+  background: #e0e0e0;
+  color: #22262a;
+}
+
+.plus:hover{
+  background: #e0e0e0;
+  color: #22262a;
+}
+
+.main-cards-section{
+  padding: 50px 0;
+}
+
+.main-cards{
+  display: flex;
+  justify-content: space-evenly;
 }

@@ -8,8 +8,6 @@ import photo2 from "../images/photo2.png"
 import photo3 from "../images/photo3.png"
 
 import { ProductCardMen, ProductCardWomen } from "../mock/main.mock"
-import { useEffect, useState } from "react"
-import { Link, useNavigate, useParams } from "react-router-dom"
 
 export function Main(){
 
@@ -22,8 +20,8 @@ export function Main(){
                     <h1>COLLUSION</h1>
                     <p>An exclusive selection of this season's trends.</p>
                     <div className="hero-buttons">
-                        <button>DISCOVER</button>
-                        <button>SHOP NOW</button>
+                        <button className="hero-discover">DISCOVER</button>
+                        <button className="hero-shop-now">SHOP NOW</button>
                     </div>
                 </div>
             </section>
@@ -62,6 +60,7 @@ export function Main(){
                                 textName={product.textName}
                                 priceFirst={product.priceFirst}
                                 priceSecond={product.priceSecond}
+                                // item={ProductCardMen}
                             />
                         // </Link>
                     )
@@ -90,6 +89,7 @@ export function Main(){
                                 textName={product.textName}
                                 priceFirst={product.priceFirst}
                                 priceSecond={product.priceSecond}
+                                // item={ProductCardWomen}
                             />
                         // </Link>
                     )
