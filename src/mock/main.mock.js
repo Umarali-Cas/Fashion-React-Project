@@ -22,7 +22,7 @@ export const ProductCardWomen = [
     },
     { 
         img: Women[1],
-        tovarName: 'IGURE',
+        tovarName: 'COAT',
         textName: 'GREEN MUSCLE FIT POLO SHIRT',
         priceFirst: '$229.00',
         priceSecond: '$129.00',
@@ -30,7 +30,7 @@ export const ProductCardWomen = [
     },
     { 
         img: Women[2],
-        tovarName: 'IGURE',
+        tovarName: 'SHIRT',
         textName: 'GREEN MUSCLE FIT POLO SHIRT',
         priceFirst: '$229.00',
         priceSecond: '$129.00',
@@ -38,7 +38,7 @@ export const ProductCardWomen = [
     },
     { 
         img: Women[3],
-        tovarName: 'IGURE',
+        tovarName: 'COOl',
         textName: 'GREEN MUSCLE FIT POLO SHIRT',
         priceFirst: '$229.00',
         priceSecond: '$129.00',
@@ -50,7 +50,7 @@ export const ProductCardWomen = [
 export const ProductCardMen = [
     { 
         img: Men[0],
-        tovarName: 'IGURE',
+        tovarName: 'MEXICAN',
         textName: 'GREEN MUSCLE FIT POLO SHIRT',
         priceFirst: '$229.00',
         priceSecond: '$129.00',
@@ -58,7 +58,7 @@ export const ProductCardMen = [
     },
     { 
         img: Men[1],
-        tovarName: 'IGURE',
+        tovarName: 'AMERICAN',
         textName: 'GREEN MUSCLE FIT POLO SHIRT',
         priceFirst: '$229.00',
         priceSecond: '$129.00',
@@ -66,7 +66,7 @@ export const ProductCardMen = [
     },
     { 
         img: Men[2],
-        tovarName: 'IGURE',
+        tovarName: 'T-SHIRT',
         textName: 'GREEN MUSCLE FIT POLO SHIRT',
         priceFirst: '$229.00',
         priceSecond: '$129.00',
@@ -74,7 +74,7 @@ export const ProductCardMen = [
     },
     { 
         img: Men[3],
-        tovarName: 'IGURE',
+        tovarName: 'SHIRT',
         textName: 'GREEN MUSCLE FIT POLO SHIRT',
         priceFirst: '$229.00',
         priceSecond: '$129.00',

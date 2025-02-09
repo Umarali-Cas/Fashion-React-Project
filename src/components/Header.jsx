@@ -68,11 +68,11 @@ export function Header(){
                             </NavLink>
                         ))}
                     </nav>
-                    <div className="menu">
+                    {/* <div className="menu">
                         <button id = "search-nav"></button>
                         <button id = "heart-nav"></button>
                         <button id = "cart-nav"></button>
-                    </div>
+                    </div> */}
                     <button onClick={openModal} className="login-main" id="login-btn">Login</button>
                 </div>
                 {isModalOpen ? (

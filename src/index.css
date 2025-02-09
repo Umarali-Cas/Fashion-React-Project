@@ -180,10 +180,14 @@ main{
   column-gap: 26px;
 }
 
+.cards-section .up img{
+  cursor: pointer;
+}
+
 .cards-section .up img:hover{
   transition: 0.2s;
-  filter: brightness(80%);
-  transform: scale(1.02);
+  filter: brightness(70%);
+  transform: scale(1.04);
 
 }
 
@@ -191,16 +195,17 @@ main{
   width: 552px;
   height: 574px;
   position: relative;
+  cursor: pointer;
 }
 
 .cards-section .four-card img:hover{
   transition: 0.2s;
-  filter: brightness(80%);
+  filter: brightness(70%);
 }
 
 .cards-section .four-card:hover{
   transition: 0.2s;
-  transform: scale(1.02);
+  transform: scale(1.04);
 }
 
 .cards-section .four-card button{
@@ -791,5 +796,40 @@ footer{
 
 .main-cards{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  column-gap: 50px;
+  row-gap: 50px;
+  flex-wrap: wrap;
+}
+
+.filter-input{
+  width: 530px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.filter-input input{
+  height: 45px;
+  padding: 11px 25px;
+  text-align: left;
+  width: 530px;
+  background: #fff;
+  border: none;
+  box-shadow: 0px 5px 5px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 5px 0 0 5px;
+  border-top: 1px solid rgb(191, 191, 191);
+  border-radius: 8px;
+}
+
+.filter-input input::placeholder {
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(0px);
+}
+
+.filter-input input:focus::placeholder {
+  transform: translateX(-215px);
 }
