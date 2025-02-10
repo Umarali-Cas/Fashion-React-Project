@@ -1,17 +1,32 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { Greeting } from "../../Greeting"
 import { ProductCardMen, ProductCardWomen } from "../../mock/main.mock"
 
 export const ShopMain = () => {
 
-    const [searchTerm, setSearchTerm] = useState(""); 
+    // const [searchTerm, setSearchTerm] = useState(""); 
 
-    const filteredWomen = ProductCardWomen.filter(product =>
-        product.tovarName.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-    const filteredMen = ProductCardMen.filter(product =>
-        product.tovarName.toLowerCase().includes(searchTerm.toLowerCase())
-    );
+    // const filteredWomen = ProductCardWomen.filter(product =>
+    //     product.tovarName.toLowerCase().includes(searchTerm.toLowerCase())
+    // );
+    // const filteredMen = ProductCardMen.filter(product =>
+    //     product.tovarName.toLowerCase().includes(searchTerm.toLowerCase())
+    // );
+
+    const [searchTerm, setSearchTerm] = useState("");
+
+    const filteredWomen = useMemo(() => {
+        return ProductCardWomen.filter(product =>
+            product.tovarName.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+    }, [searchTerm, ProductCardWomen]);
+
+    const filteredMen = useMemo(() => {
+        return ProductCardMen.filter(product =>
+            product.tovarName.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+    }, [searchTerm, ProductCardMen]);
+
 
     return(
         <section className="main-cards-section">

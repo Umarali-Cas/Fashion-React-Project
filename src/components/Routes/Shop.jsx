@@ -3,7 +3,7 @@ import { ProductCardMen, ProductCardWomen } from "../../mock/main.mock";
 
 
 export const Shop = () => {
-
+    
     const navigate = useNavigate()
     const { id } = useParams();
     const productMen = ProductCardMen.find(item => item.id === parseInt(id));
