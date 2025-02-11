@@ -56,6 +56,24 @@ export function Header(){
         },
     ];
 
+    const navList = [
+        {
+            path: "",
+            bg: search,
+            id: 1,
+        },
+        {
+            path: "",
+            bg: heart,
+            id: 2,
+        },
+        {
+            path: "/cart",
+            bg: cart,
+            id: 3,
+        },
+    ]
+
     return (
         <header className="header">
             <section className="header-section">
@@ -68,11 +86,17 @@ export function Header(){
                             </NavLink>
                         ))}
                     </nav>
-                    {/* <div className="menu">
-                        <button id = "search-nav"></button>
-                        <button id = "heart-nav"></button>
-                        <button id = "cart-nav"></button>
-                    </div> */}
+                    <div className="menu">
+                        {navList.map((item) => (
+                            <NavLink className="nav-icons" key={item.id} to={item.path}>
+                                <img className="nav-icons-img" src={item.bg} alt={item.bg} />
+                            </NavLink>
+                        ))}
+                        {/* <button id = "search-nav"></button>
+                        <button id = "heart-nav"></button> */}
+                        {/* <button id = "cart-nav"></button> */}
+                        {/* <NavLink className={"cart-nav"}><img src={cart}></img></NavLink> */}
+                    </div>
                     <button onClick={openModal} className="login-main" id="login-btn">Login</button>
                 </div>
                 {isModalOpen ? (
