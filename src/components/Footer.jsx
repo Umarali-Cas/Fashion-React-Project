@@ -36,7 +36,7 @@ export function Footer (){
                         </ul>
                         <ul>
                             <li id="first-txt">HELP</li>
-                            <li><a href="">FAQ</a></li>
+                            <li><a href="/faq/timer">FAQ</a></li>
                             <li><a href="">Privecy Policy</a></li>
                             <li><a href="">Tearms and conditions</a></li>
                             <li><a href="">Return and Exchanges</a></li>

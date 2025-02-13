@@ -8,6 +8,7 @@ import ScrollToTop from './components/ScrollToTop';
 import { ShopMain } from './components/Routes/ShopMain';
 import { Cart } from './components/Routes/Cart';
 import { useCallback, useState } from 'react';
+import { Timer } from './components/Routes/Timer';
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
           <Route path='/pages' element = {<h1>PAGES</h1>}/>
           <Route path='/blog' element = {<h1>BLOG</h1>}/>
           <Route path='/cart' element = {<Cart cart={cart}/>}/>
+          <Route path='/faq/timer' element = {<Timer />}/>
           <Route path='*' element = {<h1>Такой страницы не существует</h1>}/>
         </Routes>
         <Footer />
