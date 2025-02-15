@@ -114,7 +114,7 @@ button:active{
   margin-left: 0;
 }
 
-.hero-section{
+/* .hero-section{
   background: url(./images/1\ 1.png)center/cover no-repeat;
   height: 745px;
   padding: 400px 231px 100px 800px;
@@ -165,7 +165,7 @@ button:active{
   transition: 0.05s;
   background: white;
   color: #22262a;
-}
+} */
 
 main{
   display: flex;

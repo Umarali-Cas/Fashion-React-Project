@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
+import { BrowserRouter, Route, RouterProvider, Routes, useLocation } from 'react-router-dom';
 import './App.css';
 import { Footer } from './components/Footer';
 import { Header } from "./components/Header";
@@ -9,18 +9,21 @@ import { ShopMain } from './components/Routes/ShopMain';
 import { Cart } from './components/Routes/Cart';
 import { useCallback, useState } from 'react';
 import { Timer } from './components/Routes/Timer';
+import { routes } from './components/Routes/routes';
+import "./styles/hero.scss"
 
 function App() {
 
-  const [cart, setCart] = useState([]);
+  // const [cart, setCart] = useState([]);
 
-  const addToCart = useCallback((product) => {
-      setCart((prevCart) => [...prevCart, product]);
-  });
+  // const addToCart = useCallback((product) => {
+  //     setCart((prevCart) => [...prevCart, product]);
+  // });
 
   return (
     <div className="App">
-      <BrowserRouter>
+        <RouterProvider router={routes} />;
+      {/* <BrowserRouter>
       <Header />
         <ScrollToTop />
         <Routes>
@@ -36,7 +39,7 @@ function App() {
           <Route path='*' element = {<h1>Такой страницы не существует</h1>}/>
         </Routes>
         <Footer />
-      </BrowserRouter>
+      </BrowserRouter> */}
     </div>
   );
   
