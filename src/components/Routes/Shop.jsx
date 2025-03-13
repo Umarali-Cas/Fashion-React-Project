@@ -1,21 +1,24 @@
-import { useNavigate, useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom";
 import { ProductCardMen, ProductCardWomen } from "../../mock/main.mock";
+import { useDispatch } from "react-redux";
+import { addToCart, removeFromCart, clearCart } from "../../components/redux/ToDoList/CartSlice";
 
 
-export const Shop = ({addToCart}) => {
-    
-    const navigate = useNavigate()
+export const Shop = () => {
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
     const { id } = useParams();
+
     const productMen = ProductCardMen.find(item => item.id === parseInt(id));
     const productWomen = ProductCardWomen.find(item => item.id === parseInt(id));
-  
+
     if (!productMen && !productWomen) {
-      return <div>Продукт не найден</div>;
+        return <div>Продукт не найден</div>;
     }
 
     const product = productMen || productWomen;
- 
-    return(
+
+    return (
         <div className="product-container">
             <div className="product-detail">
                 <button className="product-detail-back" onClick={() => navigate(-1)}>+</button>
@@ -29,12 +32,14 @@ export const Shop = ({addToCart}) => {
                 <hr />
             </div>
             <div className="product-info">
-                <p className="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate modi totam ab ex et earum enim sequi, saepe quis placeat eligendi quisquam, id fugit in.</p>
+                <p className="description">Описание товара...</p>
                 <div className="add-to-cart">
                     <button className="buy">Buy</button>
-                    <button className="to-cart" onClick={() => addToCart(product)}>To Cart</button>
+                    <button className="to-cart" onClick={() => dispatch(addToCart(product))}>
+                        To Cart
+                    </button>
                 </div>
             </div>
         </div>
-        )
-}
+    );
+};

@@ -15,7 +15,7 @@ export const ProductCardWomen = [
     { 
         img: Women[0],
         tovarName: 'IGURE',
-        textName: 'GREEN MUSCLE FIT POLO SHIRT',
+        textName: 'Elegant Green Polo Shirt',
         priceFirst: '$229.00',
         priceSecond: '$129.00',
         id: 1,
@@ -23,7 +23,7 @@ export const ProductCardWomen = [
     { 
         img: Women[1],
         tovarName: 'COAT',
-        textName: 'GREEN MUSCLE FIT POLO SHIRT',
+        textName: 'Classic Beige Coat',
         priceFirst: '$229.00',
         priceSecond: '$129.00',
         id: 2,
@@ -31,7 +31,7 @@ export const ProductCardWomen = [
     { 
         img: Women[2],
         tovarName: 'SHIRT',
-        textName: 'GREEN MUSCLE FIT POLO SHIRT',
+        textName: 'Casual Blue Shirt',
         priceFirst: '$229.00',
         priceSecond: '$129.00',
         id: 3,
@@ -39,19 +39,18 @@ export const ProductCardWomen = [
     { 
         img: Women[3],
         tovarName: 'COOl',
-        textName: 'GREEN MUSCLE FIT POLO SHIRT',
+        textName: 'Trendy Summer Jacket',
         priceFirst: '$229.00',
         priceSecond: '$129.00',
         id: 4,
     },
-
 ];
 
 export const ProductCardMen = [
     { 
         img: Men[0],
         tovarName: 'MEXICAN',
-        textName: 'GREEN MUSCLE FIT POLO SHIRT',
+        textName: 'Stylish Mexican Shirt',
         priceFirst: '$229.00',
         priceSecond: '$129.00',
         id: 5,
@@ -59,7 +58,7 @@ export const ProductCardMen = [
     { 
         img: Men[1],
         tovarName: 'AMERICAN',
-        textName: 'GREEN MUSCLE FIT POLO SHIRT',
+        textName: 'Premium American Jacket',
         priceFirst: '$229.00',
         priceSecond: '$129.00',
         id: 6,
@@ -67,7 +66,7 @@ export const ProductCardMen = [
     { 
         img: Men[2],
         tovarName: 'T-SHIRT',
-        textName: 'GREEN MUSCLE FIT POLO SHIRT',
+        textName: 'Casual Cotton T-Shirt',
         priceFirst: '$229.00',
         priceSecond: '$129.00',
         id: 7,
@@ -75,10 +74,9 @@ export const ProductCardMen = [
     { 
         img: Men[3],
         tovarName: 'SHIRT',
-        textName: 'GREEN MUSCLE FIT POLO SHIRT',
+        textName: 'Formal Business Shirt',
         priceFirst: '$229.00',
         priceSecond: '$129.00',
         id: 8,
     },
-
 ];

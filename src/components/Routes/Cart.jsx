@@ -1,24 +1,25 @@
-import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart, removeFromCart, clearCart } from "../../components/redux/ToDoList/CartSlice";
 
-export const Cart = ({ cart = [] }) => {
+export const Cart = () => {
+    const dispatch = useDispatch();
+    const cart = useSelector(state => state.cart.items);
+
+    const total = cart.reduce((sum, item) => sum + item.priceFirst, 0);
+
     return (
         <section className="cart-section">
-            <div className="cart-tovar-container">
-                <h2>Корзина</h2>
-                {cart.length === 0 ? (
-                    <p>Корзина пуста. <Link to="/">Вернуться в магазин</Link></p>
-                ) : <div className="cart-tovars">
-                    {cart.map((item, index) => (
-                        <div key={index} className="cart-item">
-                            <img src={item.img} alt={item.tovarName} />
-                            <h3>{item.tovarName}</h3>
-                            <p>{item.priceFirst}</p>
-                            <button style={{width: "125px", height: "35px", marginBottom: "5px", borderRadius: "8px", background: "green", color: "white", border: "none"}}>Buy</button>
-                        </div>
-                    ))}
-                </div>
-                }
-            </div>
+            <ul style={{display: "flex", columnGap: "30px"}}>
+                {cart.map(item => (
+                    <li style={{display: "flex", flexDirection: "column", alignItems: "center"}} key={item.id}>
+                        <img src={item.img} alt={item.textName} width="250" />
+                        {item.textName} - ${item.priceFirst}
+                        <button onClick={() => dispatch(removeFromCart(item.id))}>Remove</button>
+                    </li>
+                ))}
+            </ul>
+            <h3>Total: ${total}</h3>
+            <button onClick={() => dispatch(clearCart())}>Clear Cart</button>
         </section>
     );
 };
