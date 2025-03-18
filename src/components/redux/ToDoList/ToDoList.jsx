@@ -1,28 +1,34 @@
-import { configureStore, createSlice } from "@reduxjs/toolkit";
 import { useDispatch, useSelector } from "react-redux";
-import { useState } from "react";
-import styles from "./ToDoList.module.scss"
-import { todosSlice } from "./toDoSlice";
+import { useEffect, useState } from "react";
+import styles from "./ToDoList.module.scss";
+import { fetchTodos, addTodo, toggleTodo, removeTodo, setFilter } from "./toDoSlice";
 
-const { addTodo, toggleTodo, removeTodo, setFilter } = todosSlice.actions
+export const ToDoList = () => {
+  const dispatch = useDispatch();
+  const { items, filter } = useSelector(state => state.todo);
+  const [text, setText] = useState("");
 
-export const TodoApp = () => {
-  const dispatch = useDispatch()
-  const { items, filter } = useSelector(state => state.todo)
-  const [text, setText] = useState("")
+  useEffect(() => {
+    dispatch(fetchTodos());
+  }, [dispatch]);
 
   const filteredTodos = items.filter(todo => {
-    if (filter === "active") return !todo.completed
-    if (filter === "completed") return todo.completed
-    return true
-  })
+    if (filter === "active") return !todo.completed;
+    if (filter === "completed") return todo.completed;
+    return true;
+  });
 
   return (
     <div className={styles.container}>
       <h1>ToDo List</h1>
       <div className={styles.inp_btn}>
         <input value={text} onChange={e => setText(e.target.value)} />
-        <button onClick={() => { dispatch(addTodo(text)); setText(""); }}>Add</button>
+        <button onClick={() => { 
+          if (text.trim()) {
+            dispatch(addTodo(text)); 
+            setText(""); 
+          }
+        }}>Add</button>
       </div>
       <div>
         <button onClick={() => dispatch(setFilter("all"))}>All</button>

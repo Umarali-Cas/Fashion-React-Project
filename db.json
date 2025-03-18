@@ -1,0 +1,76 @@
+{
+  "todos": [
+    {
+      "id": 1742313326676,
+      "text": "adwaw",
+      "completed": false
+    },
+    {
+      "id": 1742313337802,
+      "text": "awdawdadawf",
+      "completed": false
+    },
+    {
+      "id": 1742313340369,
+      "text": "adwdas",
+      "completed": false
+    },
+    {
+      "id": 1742313778035,
+      "text": "awdwda",
+      "completed": false
+    }
+  ],
+  "todosCart": [],
+  "products": [
+    {
+      "id": 1,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFtIiwbQLKvRRQn_06612_CSC84SsKQTbvoQ&s",
+      "tovarName": "IGURE",
+      "textName": "Elegant Green Polo Shirt",
+      "priceFirst": "$229.00",
+      "priceSecond": "$129.00"
+    },
+    {
+      "id": 2,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUBntF15IRvE7KShuizPnnaSOcTL1roH_AGw&s",
+      "tovarName": "COAT",
+      "textName": "Classic Beige Coat",
+      "priceFirst": "$229.00",
+      "priceSecond": "$129.00"
+    },
+    {
+      "id": 3,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFtIiwbQLKvRRQn_06612_CSC84SsKQTbvoQ&s",
+      "tovarName": "T-Shirt",
+      "textName": "Classic Beige Coat",
+      "priceFirst": "$229.00",
+      "priceSecond": "$129.00"
+    },
+    {
+      "id": 4,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUBntF15IRvE7KShuizPnnaSOcTL1roH_AGw&s",
+      "tovarName": "T-Shirt",
+      "textName": "Classic Beige Coat",
+      "priceFirst": "$229.00",
+      "priceSecond": "$129.00"
+    },
+    {
+      "id": 5,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFtIiwbQLKvRRQn_06612_CSC84SsKQTbvoQ&s",
+      "tovarName": "T-Shirt",
+      "textName": "Classic Beige Coat",
+      "priceFirst": "$229.00",
+      "priceSecond": "$129.00"
+    },
+    {
+      "id": 6,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUBntF15IRvE7KShuizPnnaSOcTL1roH_AGw&s",
+      "tovarName": "T-Shirt",
+      "textName": "Classic Beige Coat",
+      "priceFirst": "$229.00",
+      "priceSecond": "$129.00"
+    }
+  ],
+  "productsCart": []
+}

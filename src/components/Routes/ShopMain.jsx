@@ -1,64 +1,70 @@
-import { useMemo, useState } from "react";
-import { Greeting } from "../../Greeting"
-import { ProductCardMen, ProductCardWomen } from "../../mock/main.mock"
+import { useEffect, useState } from "react";
+import { Greeting } from "../../Greeting";
 
 export const ShopMain = () => {
+  const [products, setProducts] = useState([]);
+  const [totalProducts, setTotalProducts] = useState(0);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage] = useState(2);
 
-    // const [searchTerm, setSearchTerm] = useState(""); 
+  useEffect(() => {
+    fetch(`http://localhost:3001/products?_page=${currentPage}&_limit=${itemsPerPage}`)
+      .then(response => {
+        const total = Number(response.headers.get('X-Total-Count'));
+        setTotalProducts(total);
+        return response.json();
+      })
+      .then(data => {
+        setProducts(data);
+      })
+      .catch(error => console.error("Ошибка загрузки данных:", error));
+  }, [currentPage, itemsPerPage]);
 
-    // const filteredWomen = ProductCardWomen.filter(product =>
-    //     product.tovarName.toLowerCase().includes(searchTerm.toLowerCase())
-    // );
-    // const filteredMen = ProductCardMen.filter(product =>
-    //     product.tovarName.toLowerCase().includes(searchTerm.toLowerCase())
-    // );
+  const totalPages = Math.ceil(totalProducts / itemsPerPage);
 
-    const [searchTerm, setSearchTerm] = useState("");
+  return (
+    <section className="main-cards-section">
+        <div className="filter-input">
+            <input
+                type="text"
+                placeholder="Search"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+            />
+        </div>
+        <div className="main-cards">
+            {products.length === 0 ? (
+                <p>Нет товаров для отображения</p>
+            ) : (
+                products.map((product) => (
+                    <Greeting
+                        key={product.id}
+                        productId={product.id}
+                        picture={product.img}
+                        tovarName={product.tovarName}
+                        textName={product.textName}
+                        priceFirst={product.priceFirst}
+                        priceSecond={product.priceSecond}
+                    />
+                ))
+            )}
+        </div>
 
-    const filteredWomen = useMemo(() => {
-        return ProductCardWomen.filter(product =>
-            product.tovarName.toLowerCase().includes(searchTerm.toLowerCase())
-        );
-    }, [searchTerm, ProductCardWomen]);
-
-    const filteredMen = useMemo(() => {
-        return ProductCardMen.filter(product =>
-            product.tovarName.toLowerCase().includes(searchTerm.toLowerCase())
-        );
-    }, [searchTerm, ProductCardMen]);
-
-
-    return(
-        <section className="main-cards-section">
-            <div className="filter-input">
-                <input type="text" placeholder="Search" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)}/>
+        {totalProducts > itemsPerPage && (
+            <div className="pagination">
+                {Array.from({ length: Math.ceil(totalProducts / itemsPerPage) }, (_, index) => (
+                    <button
+                        key={index}
+                        onClick={() => setCurrentPage(index + 1)}
+                        className={index + 1 === currentPage ? "active" : ""}
+                    >
+                        {index + 1}
+                    </button>
+                ))}
             </div>
-            <div className="main-cards">
-            {filteredWomen.map(product => {
-                return (
-                    <Greeting 
-                            productId={product.id}
-                            picture={product.img} 
-                            tovarName={product.tovarName}
-                            textName={product.textName}
-                            priceFirst={product.priceFirst}
-                            priceSecond={product.priceSecond}
-                        />
-                )
-            })}
-            {filteredMen.map(product => {
-                return (
-                        <Greeting 
-                            productId={product.id}
-                            picture={product.img} 
-                            tovarName={product.tovarName}
-                            textName={product.textName}
-                            priceFirst={product.priceFirst}
-                            priceSecond={product.priceSecond}
-                        />
-                )
-            })}
-            </div>
-        </section>
-    )
-}
+        )}
+    </section>
+);
+
+};

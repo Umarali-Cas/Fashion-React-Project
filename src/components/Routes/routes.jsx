@@ -6,7 +6,7 @@ import { Shop } from "./Shop";
 import { ShopMain } from "./ShopMain";
 import { Cart } from "./Cart";
 import { Timer } from "./Timer";
-import { TodoApp } from "../redux/ToDoList/ToDoList";
+import { ToDoList } from "../redux/ToDoList/ToDoList";
 
 
 
@@ -33,7 +33,7 @@ export const routes = createBrowserRouter([
         },
         {
           path: ROUTER_PATHS.features,
-          element: <TodoApp />,
+          element: <ToDoList />,
         },
         {
           path: ROUTER_PATHS.pages,
